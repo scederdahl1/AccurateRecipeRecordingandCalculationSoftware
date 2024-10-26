@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MongoDB.Driver;
 using MongoDB.Bson;
 using System.Threading;
+using System.Diagnostics.Eventing.Reader;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
@@ -19,49 +20,64 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         {
             InitializeComponent();
         }
-
-        private void LoginButton_Click(object sender, EventArgs e)
+        public bool validCheck { get; set; }
+        private async void LoginButton_Click(object sender, EventArgs e)
         {
-            string email = emailTextBox.Text;
+            string username = emailTextBox.Text;
             string password = passwordTextBox.Text;
 
-            if (email.Contains("@") && email.Contains(".com") || email.Contains(".net"))
+            try
             {
-                if (password.Length < 15)
+                bool userCheck = await authenUser(username, password);
+                validCheck = userCheck;
+
+                if (validCheck == true)
                 {
-                    passwordLabel.Text = "invalid length";
-                }
-                Boolean userCheck = authenUser(email, password);
-                if (userCheck == true)
-                {
-                    MessageBox.Show("User Exists");
+                    this.DialogResult = DialogResult.OK; // Indicate a successful login
+                    this.Close(); // Close the login form
                 }
                 else
                 {
-                    MessageBox.Show("User Does not exits!");
+                    MessageBox.Show("Invalid username or password.");
                 }
-                
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
-         private Boolean authenUser(string username, string password)
+        private async Task<bool> authenUser(string username, string password) //User Account Validatiom
         {
             String connectionUri = "mongodb+srv://scederdahl12:fireHouse123456@cluster0.omeqq.mongodb.net/?appName=Cluster0";
             MongoClient dbClient = new MongoClient(connectionUri);
             var database = dbClient.GetDatabase("RecipeCalculatorAccounts");
-            var collection = database.GetCollection<BsonDocument>("UserIndexs");
-            var filter = Builders<BsonDocument>.Filter.Eq(username, password );
-            var existingUser = collection.Find(filter);
+            var collection = database.GetCollection<BsonDocument>("userIndex");
+            var filter = Builders<BsonDocument>.Filter.And(
+        Builders<BsonDocument>.Filter.Eq("email", username),
+        Builders<BsonDocument>.Filter.Eq("password", password) // Remember to use secure password handling in production
+    );
+
+            var existingUser = await collection.Find(filter).FirstOrDefaultAsync();
+
             if (existingUser != null)
             {
+                
                 return true;
             }
+
             return false;
+        }
 
-            } 
+        private void registrationLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            userRegistration registration = new userRegistration();
+            registration.Show();
+        }
 
-              
+        private void Login_Load(object sender, EventArgs e)
+        {
 
-        
+        }
     }
-}
+    }
+

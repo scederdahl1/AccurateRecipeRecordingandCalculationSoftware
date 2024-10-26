@@ -148,6 +148,12 @@
       <DependentUpon>AccurateRecipeRecordingandCalculationSoftware.cs</DependentUpon>
     </Compile>
     <Compile Include="AccurateRecipeaRecordingandCalculationSoftware.cs" />
+    <Compile Include="userRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userRegistration.Designer.cs">
+      <DependentUpon>userRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="userRegistration.resx">
+      <DependentUpon>userRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
