@@ -34,6 +34,7 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
             this.registrationLink = new System.Windows.Forms.LinkLabel();
+            this.invalidInfoLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // emailLabel
@@ -66,6 +67,7 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(148, 26);
             this.emailTextBox.TabIndex = 2;
+            
             // 
             // passwordTextBox
             // 
@@ -96,13 +98,24 @@
             this.registrationLink.TabIndex = 5;
             this.registrationLink.TabStop = true;
             this.registrationLink.Text = "New ? Register Here";
-            this.registrationLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registrationLink_LinkClicked);
+            
+            // 
+            // invalidInfoLabel
+            // 
+            this.invalidInfoLabel.AutoSize = true;
+            this.invalidInfoLabel.Location = new System.Drawing.Point(182, 24);
+            this.invalidInfoLabel.Name = "invalidInfoLabel";
+            this.invalidInfoLabel.Size = new System.Drawing.Size(187, 20);
+            this.invalidInfoLabel.TabIndex = 6;
+            this.invalidInfoLabel.Text = "Invalid Email or password";
+            this.invalidInfoLabel.Visible = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 248);
+            this.Controls.Add(this.invalidInfoLabel);
             this.Controls.Add(this.registrationLink);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.passwordTextBox);
@@ -112,7 +125,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Login";
             this.Text = "User Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +138,6 @@
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.LinkLabel registrationLink;
+        private System.Windows.Forms.Label invalidInfoLabel;
     }
 }

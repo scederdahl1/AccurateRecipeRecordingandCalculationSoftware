@@ -11,6 +11,7 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 using System.Threading;
 using System.Diagnostics.Eventing.Reader;
+using System.Security.Cryptography.X509Certificates;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
@@ -19,8 +20,17 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         public Login()
         {
             InitializeComponent();
+
+            
+            
+                
+            
+            
+
         }
         public bool validCheck { get; set; }
+        public static string activeUser { get; set; }
+
         private async void LoginButton_Click(object sender, EventArgs e)
         {
             string username = emailTextBox.Text;
@@ -34,11 +44,17 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 if (validCheck == true)
                 {
                     this.DialogResult = DialogResult.OK; // Indicate a successful login
+                    Login.activeUser = username;
                     this.Close(); // Close the login form
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password.");
+                 
+                        invalidInfoLabel.Visible = true;
+                    passwordTextBox.Clear();
+                  
+                        
+                  
                 }
             }
             catch (Exception ex)
@@ -54,7 +70,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             var collection = database.GetCollection<BsonDocument>("userIndex");
             var filter = Builders<BsonDocument>.Filter.And(
         Builders<BsonDocument>.Filter.Eq("email", username),
-        Builders<BsonDocument>.Filter.Eq("password", password) // Remember to use secure password handling in production
+        Builders<BsonDocument>.Filter.Eq("password", password) 
     );
 
             var existingUser = await collection.Find(filter).FirstOrDefaultAsync();
@@ -77,6 +93,16 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if(String.IsNullOrEmpty(emailTextBox.Text))
+            {
+                invalidInfoLabel.Visible = false;
+
+            }
+            
         }
     }
     }
