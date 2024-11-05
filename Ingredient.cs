@@ -4,23 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
-    internal class Ingredient
+    public class Ingredient
     {
-        public string name { get; set; }
-        public string preparation{ get; set; }
-        public int amount { get; set; }
-        public double cost { get; set; }
+        public string Name { get; set; }
+        public string Preparation { get; set; }
+        public int Amount { get; set; }
+        public decimal Cost { get; set; }
 
 
 
-        public Ingredient(string name, string preparation, int amount, int cost)
+        public Ingredient(string name, string preparation, int amount, Decimal cost)
         {
-            this.name = name;
-            this.preparation = preparation;
-            this.amount = amount;
-            this.cost = cost;
+            Name = name;
+            Preparation = preparation;
+            Amount = amount;
+            Cost = cost;
             
         }
 

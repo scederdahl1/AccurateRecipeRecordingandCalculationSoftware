@@ -43,6 +43,6 @@ C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\bin\Debug
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\AccurateRecipeRecordingandCalculationSoftware.csproj.CopyComplete
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\AccurateRecipeRecordingandCalculationSoftware.userRegistration.resources
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\AccurateRecipeRecordingandCalculationSoftware.recipeCreation.resources
+C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\Accurate.F12EC73D.Up2Date

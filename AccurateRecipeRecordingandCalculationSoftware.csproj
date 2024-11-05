@@ -149,6 +149,7 @@
       <DependentUpon>AccurateRecipeRecordingandCalculationSoftware.cs</DependentUpon>
     </Compile>
     <Compile Include="AccurateRecipeaRecordingandCalculationSoftware.cs" />
+    <Compile Include="Class5.cs" />
     <Compile Include="CookingStep.cs" />
     <Compile Include="Ingredient.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -208,9 +209,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

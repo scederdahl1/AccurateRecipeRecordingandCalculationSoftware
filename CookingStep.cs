@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
-    internal class CookingStep
+     public class CookingStep
     {
-        string step { get; set; };
-        int stepNumber { get; set; }
-        string stepTime { get; set; }
+        public string StepInfo { get; set; }
+        public int StepNumber { get; set; }
+        public string StepTime { get; set; }
+
+
+        public CookingStep(string stepInfo, int stepNumber, string stepTime)
+        {
+            StepInfo = stepInfo;
+            StepNumber = stepNumber;
+            StepTime = stepTime;
+
+        }
 
     }
 }

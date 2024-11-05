@@ -67,7 +67,6 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(148, 26);
             this.emailTextBox.TabIndex = 2;
-            
             // 
             // passwordTextBox
             // 
@@ -98,7 +97,7 @@
             this.registrationLink.TabIndex = 5;
             this.registrationLink.TabStop = true;
             this.registrationLink.Text = "New ? Register Here";
-            
+            this.registrationLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registrationLink_LinkClicked_1);
             // 
             // invalidInfoLabel
             // 

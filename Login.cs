@@ -29,7 +29,8 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
         }
         public bool validCheck { get; set; }
-        public static string activeUser { get; set; }
+      
+
 
         private async void LoginButton_Click(object sender, EventArgs e)
         {
@@ -44,7 +45,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 if (validCheck == true)
                 {
                     this.DialogResult = DialogResult.OK; // Indicate a successful login
-                    Login.activeUser = username;
+                    
                     this.Close(); // Close the login form
                 }
                 else
@@ -77,14 +78,15 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
             if (existingUser != null)
             {
-                
+                Useraccount.UserId = existingUser["_id"].AsObjectId;
+               
                 return true;
             }
 
             return false;
         }
 
-        private void registrationLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void RegistrationLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             userRegistration registration = new userRegistration();
             registration.Show();
@@ -103,6 +105,12 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
             }
             
+        }
+
+        private void registrationLink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            userRegistration registration = new userRegistration();
+            registration.Show();
         }
     }
     }
