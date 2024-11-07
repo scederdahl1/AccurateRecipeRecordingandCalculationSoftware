@@ -34,5 +34,11 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             createdRecipe.Show();
             
         }
+
+        private void createDishLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            dishCreationForm createdDishForm = new dishCreationForm();
+            createdDishForm.Show();
+        }
     }
 }

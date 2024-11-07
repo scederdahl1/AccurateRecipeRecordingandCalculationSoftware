@@ -16,6 +16,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         public string CookTime { get; set; }
         public int Servings { get; set; }
         public double CostPerServing { get; set; }
+        public string fileType { get; set; }
 
         public Recipe() // Default constructor
         {
@@ -25,6 +26,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             PrepTime = string.Empty;
             CookTime = string.Empty;
             Servings = 0;
+            fileType = "recipe";
         }
 
         public Recipe(ObjectId userId) : this() // Constructor with user ID

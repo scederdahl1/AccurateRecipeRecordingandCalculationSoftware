@@ -46,3 +46,4 @@ C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\bin\Debug
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\AccurateRecipeRecordingandCalculationSoftware.userRegistration.resources
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\AccurateRecipeRecordingandCalculationSoftware.recipeCreation.resources
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\Accurate.F12EC73D.Up2Date
+C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\AccurateRecipeRecordingandCalculationSoftware.dishCreationForm.resources

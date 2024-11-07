@@ -31,7 +31,7 @@
             this.recipeOptionPanel = new System.Windows.Forms.Panel();
             this.recipeCreationLabell = new System.Windows.Forms.LinkLabel();
             this.dishOptionPanel = new System.Windows.Forms.Panel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.createDishLabel = new System.Windows.Forms.LinkLabel();
             this.testcookingPanel = new System.Windows.Forms.Panel();
             this.recipeOptionPanel.SuspendLayout();
             this.dishOptionPanel.SuspendLayout();
@@ -58,21 +58,22 @@
             // 
             // dishOptionPanel
             // 
-            this.dishOptionPanel.Controls.Add(this.linkLabel2);
+            this.dishOptionPanel.Controls.Add(this.createDishLabel);
             this.dishOptionPanel.Location = new System.Drawing.Point(439, 12);
             this.dishOptionPanel.Name = "dishOptionPanel";
             this.dishOptionPanel.Size = new System.Drawing.Size(237, 136);
             this.dishOptionPanel.TabIndex = 1;
             // 
-            // linkLabel2
+            // createDishLabel
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(78, 79);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(87, 13);
-            this.linkLabel2.TabIndex = 0;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Create New Dish";
+            this.createDishLabel.AutoSize = true;
+            this.createDishLabel.Location = new System.Drawing.Point(78, 79);
+            this.createDishLabel.Name = "createDishLabel";
+            this.createDishLabel.Size = new System.Drawing.Size(87, 13);
+            this.createDishLabel.TabIndex = 0;
+            this.createDishLabel.TabStop = true;
+            this.createDishLabel.Text = "Create New Dish";
+            this.createDishLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createDishLabel_LinkClicked);
             // 
             // testcookingPanel
             // 
@@ -106,7 +107,7 @@
         private System.Windows.Forms.Panel dishOptionPanel;
         private System.Windows.Forms.Panel testcookingPanel;
         private System.Windows.Forms.LinkLabel recipeCreationLabell;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel createDishLabel;
     }
 }
 

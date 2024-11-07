@@ -74,10 +74,12 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             List<Ingredient> ingredientsList = ReadDataIntoIngredient();
             List<CookingStep> cookingStepsList = ReadDataIntoCookingSteps();
             string recipeName = recipeTitlebox.Text;
+            int servings = Int32.Parse(recipeServingsTextbox.Text);
 
             return new Recipe(userId)
             {
                 UserId = userId,
+                Servings = servings,
 
                 Name = recipeName,
                 IngredientsList = ingredientsList,
