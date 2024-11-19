@@ -5,6 +5,8 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using MongoDB.Driver;
+using System.Threading.Tasks;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
@@ -26,11 +28,9 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 {
                     try
                     {
-                        
                         byte[] bsonData = File.ReadAllBytes(file);
                         var recipeDocument = BsonSerializer.Deserialize<BsonDocument>(bsonData);
 
-                        
                         if (recipeDocument.Contains("UserId") && recipeDocument["UserId"] == currentUserId && recipeDocument.Contains("fileType") && recipeDocument["fileType"] == "recipe")
                         {
                             recipeFileCheckbox.Items.Add(Path.GetFileName(file));
@@ -38,7 +38,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                     }
                     catch (Exception ex)
                     {
-                        // Handle any file that fails to deserialize 
+                        // Handle any file that fails to deserialize
                         MessageBox.Show($"Error processing file {file}: {ex.Message}");
                     }
                 }
@@ -57,39 +57,79 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             loadRecipeFilesIntoCheckbox(directoryPath, currentUserId);
         }
 
-        private void createDishBtn_Click(object sender, EventArgs e)
+        private async void createDishBtn_Click(object sender, EventArgs e)
         {
             if (recipeFileCheckbox.CheckedItems.Count == 0)
             {
                 MessageBox.Show("No files selected. Please check at least one file.");
                 return;
             }
+
+            // Create a new Dish object using the dish name from the TextBox
+            string dishName = dishNameTxtBox.Text;
+            Dish myDish = new Dish(dishName);
+
             foreach (string fileName in recipeFileCheckbox.CheckedItems)
             {
                 try
                 {
                     // Reconstruct the full file path
-                    string directoryPath = "C:\\Users\\PC\\Desktop"; 
+                    string directoryPath = "C:\\Users\\PC\\Desktop";
                     string filePath = Path.Combine(directoryPath, fileName);
 
                     // Read and process the BSON file
                     byte[] bsonData = File.ReadAllBytes(filePath);
                     var recipeDocument = BsonSerializer.Deserialize<BsonDocument>(bsonData);
 
-                    // Example: Display recipe name
-                    if (recipeDocument.Contains("Name"))
-                    {
-                        string recipeName = recipeDocument["Name"].ToString();
-                        MessageBox.Show($"Processing recipe: {recipeName}");
-                    }
+                    // Deserialize BSON data into Recipe object
+                    Recipe recipe = BsonSerializer.Deserialize<Recipe>(bsonData);
+                    myDish.Recipes.Add(recipe);
+
+                    
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error processing file {fileName}: {ex.Message}");
                 }
             }
+
+            // Combine and reorder cooking steps
+            myDish.CombineCookingSteps();
+
+            // Ensure the dish name is safe for a file path
+            string sanitizedDishName = string.Concat(myDish.Name.Split(Path.GetInvalidFileNameChars()));
+            string bsonFilePath = Path.Combine("C:\\Users\\PC\\Desktop", sanitizedDishName + ".bson");
+
+            // Serialize the Dish object to BSON
+            using (var fileStream = File.Create(bsonFilePath))
+            {
+                // Create a BsonBinaryWriter to write to the file stream
+                using (var writer = new BsonBinaryWriter(fileStream))
+                {
+                    // Serialize the Dish object to the BSON format
+                    BsonSerializer.Serialize(writer, myDish);
+                }
+            }
+
+            // Optional: Notify the user of the saved file
+            MessageBox.Show($"Dish saved to {bsonFilePath}");
+
+            await SaveDishToMongoDB(myDish);
+
+
+        }
+        private async Task SaveDishToMongoDB(Dish myDish) //Backup to MongoDatabase
+        {
+
+            string connectionString = "mongodb+srv://scederdahl12:fireHouse123456@cluster0.omeqq.mongodb.net/?appName=Cluster0";
+            var client = new MongoClient(connectionString);
+            var database = client.GetDatabase("RecipeCalculatorAccounts");
+            var collection = database.GetCollection<Dish>("DishIndex");
+
+            await collection.InsertOneAsync(myDish);
+
+            MessageBox.Show("Dish backed up to MongoDB successfully!");
         }
 
-    }
     }
 }

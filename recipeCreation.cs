@@ -146,6 +146,11 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
             MessageBox.Show("Recipe backed up to MongoDB successfully!");
         }
+
+        private void recipeCreation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
