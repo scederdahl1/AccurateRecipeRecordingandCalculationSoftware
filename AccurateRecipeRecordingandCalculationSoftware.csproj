@@ -148,30 +148,30 @@
     <Compile Include="AccurateRecipeRecordingandCalculationSoftware.Designer.cs">
       <DependentUpon>AccurateRecipeRecordingandCalculationSoftware.cs</DependentUpon>
     </Compile>
-    <Compile Include="AccurateRecipeaRecordingandCalculationSoftware.cs" />
-    <Compile Include="Class5.cs" />
-    <Compile Include="CookingStep.cs" />
-    <Compile Include="Dish.cs" />
+    <Compile Include="Classes\AccurateRecipeaRecordingandCalculationSoftware.cs" />
+    <Compile Include="Classes\Class5.cs" />
+    <Compile Include="Classes\CookingStep.cs" />
+    <Compile Include="Classes\Dish.cs" />
     <Compile Include="dishCreationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dishCreationForm.Designer.cs">
       <DependentUpon>dishCreationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ingredient.cs" />
+    <Compile Include="Classes\Ingredient.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="recipe.cs" />
+    <Compile Include="Classes\recipe.cs" />
     <Compile Include="recipeCreation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="recipeCreation.Designer.cs">
       <DependentUpon>recipeCreation.cs</DependentUpon>
     </Compile>
-    <Compile Include="userAccount.cs" />
+    <Compile Include="Classes\userAccount.cs" />
     <Compile Include="userRegistration.cs">
       <SubType>Form</SubType>
     </Compile>

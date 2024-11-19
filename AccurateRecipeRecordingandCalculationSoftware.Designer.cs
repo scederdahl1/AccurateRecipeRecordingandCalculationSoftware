@@ -40,17 +40,19 @@
             // recipeOptionPanel
             // 
             this.recipeOptionPanel.Controls.Add(this.recipeCreationLabell);
-            this.recipeOptionPanel.Location = new System.Drawing.Point(12, 12);
+            this.recipeOptionPanel.Location = new System.Drawing.Point(18, 18);
+            this.recipeOptionPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.recipeOptionPanel.Name = "recipeOptionPanel";
-            this.recipeOptionPanel.Size = new System.Drawing.Size(237, 156);
+            this.recipeOptionPanel.Size = new System.Drawing.Size(356, 240);
             this.recipeOptionPanel.TabIndex = 0;
             // 
             // recipeCreationLabell
             // 
             this.recipeCreationLabell.AutoSize = true;
-            this.recipeCreationLabell.Location = new System.Drawing.Point(44, 79);
+            this.recipeCreationLabell.Location = new System.Drawing.Point(66, 122);
+            this.recipeCreationLabell.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.recipeCreationLabell.Name = "recipeCreationLabell";
-            this.recipeCreationLabell.Size = new System.Drawing.Size(106, 13);
+            this.recipeCreationLabell.Size = new System.Drawing.Size(155, 20);
             this.recipeCreationLabell.TabIndex = 0;
             this.recipeCreationLabell.TabStop = true;
             this.recipeCreationLabell.Text = "+Create New Recipe";
@@ -59,17 +61,19 @@
             // dishOptionPanel
             // 
             this.dishOptionPanel.Controls.Add(this.createDishLabel);
-            this.dishOptionPanel.Location = new System.Drawing.Point(439, 12);
+            this.dishOptionPanel.Location = new System.Drawing.Point(658, 18);
+            this.dishOptionPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dishOptionPanel.Name = "dishOptionPanel";
-            this.dishOptionPanel.Size = new System.Drawing.Size(237, 136);
+            this.dishOptionPanel.Size = new System.Drawing.Size(356, 209);
             this.dishOptionPanel.TabIndex = 1;
             // 
             // createDishLabel
             // 
             this.createDishLabel.AutoSize = true;
-            this.createDishLabel.Location = new System.Drawing.Point(78, 79);
+            this.createDishLabel.Location = new System.Drawing.Point(117, 122);
+            this.createDishLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.createDishLabel.Name = "createDishLabel";
-            this.createDishLabel.Size = new System.Drawing.Size(87, 13);
+            this.createDishLabel.Size = new System.Drawing.Size(128, 20);
             this.createDishLabel.TabIndex = 0;
             this.createDishLabel.TabStop = true;
             this.createDishLabel.Text = "Create New Dish";
@@ -77,21 +81,23 @@
             // 
             // testcookingPanel
             // 
-            this.testcookingPanel.Location = new System.Drawing.Point(12, 174);
+            this.testcookingPanel.Location = new System.Drawing.Point(18, 268);
+            this.testcookingPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.testcookingPanel.Name = "testcookingPanel";
-            this.testcookingPanel.Size = new System.Drawing.Size(237, 197);
+            this.testcookingPanel.Size = new System.Drawing.Size(356, 303);
             this.testcookingPanel.TabIndex = 2;
             // 
             // AccurateRecipeRecordingandCalculationSoftware
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.testcookingPanel);
             this.Controls.Add(this.dishOptionPanel);
             this.Controls.Add(this.recipeOptionPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AccurateRecipeRecordingandCalculationSoftware";
-            this.Text = "Name(TBD)";
+            this.Text = "CulinaCalc";
             this.Load += new System.EventHandler(this.AccurateRecipeRecordingandCalculationSoftware_Load);
             this.recipeOptionPanel.ResumeLayout(false);
             this.recipeOptionPanel.PerformLayout();

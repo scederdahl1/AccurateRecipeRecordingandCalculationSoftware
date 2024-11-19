@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
@@ -12,8 +13,8 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         public string Name { get; set; }
         public List<Ingredient> IngredientsList { get; set; }
         public List<CookingStep> CookingStepsList { get; set; }
-        public string PrepTime { get; set; }
-        public string CookTime { get; set; }
+        public TimeSpan PrepTime { get; set; }
+        public TimeSpan CookTime { get; set; }
         public int Servings { get; set; }
         public double CostPerServing { get; set; }
         public string fileType { get; set; }
@@ -23,8 +24,8 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             IngredientsList = new List<Ingredient>();
             CookingStepsList = new List<CookingStep>();
             CostPerServing = 0;
-            PrepTime = string.Empty;
-            CookTime = string.Empty;
+            PrepTime = TimeSpan.Zero;
+            CookTime = TimeSpan.Zero;
             Servings = 0;
             fileType = "recipe";
         }

@@ -8,5 +8,6 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 {
     internal class Dish
     {
+
     }
 }

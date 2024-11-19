@@ -51,12 +51,37 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             {
 
                 if (row.IsNewRow) continue;
+                TimeSpan stepTime = TimeSpan.Zero;
 
                 int StepNumber = Convert.ToInt16(row.Cells["cookingStepNumber"].Value ?? 0);
                 string StepInfo = row.Cells["cookingStepInstructions"].Value?.ToString() ?? string.Empty;
-                string StepTime = row.Cells["cookingStepTime"].Value?.ToString() ?? string.Empty;
+       
+                string stepTimeString = row.Cells["cookingStepTime"].Value?.ToString();
+                if (!string.IsNullOrWhiteSpace(stepTimeString) && TimeSpan.TryParse(stepTimeString, out TimeSpan parsedTime))
+                {
+                    if (int.TryParse(stepTimeString, out int timeValue))
+                    {
+                        // Assume input is in seconds by default
+                        if (timeValue < 60)
+                        {
+                            stepTime = TimeSpan.FromSeconds(timeValue);
+                        }
+                        else
+                        {
+                            // For larger numbers, treat as minutes
+                            stepTime = TimeSpan.FromMinutes(timeValue);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Invalid time input for step {stepTime}. Please enter a number representing seconds or minutes.");
+                        continue;
+                    }
+                }
+                
 
-                var cookingStep = new CookingStep(StepInfo, StepNumber, StepTime);
+
+                var cookingStep = new CookingStep(StepInfo, StepNumber, stepTime);
 
                 cookingStepList.Add(cookingStep);
 

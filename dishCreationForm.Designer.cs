@@ -83,6 +83,7 @@
             this.createDishBtn.TabIndex = 4;
             this.createDishBtn.Text = "Create Dish";
             this.createDishBtn.UseVisualStyleBackColor = true;
+            this.createDishBtn.Click += new System.EventHandler(this.createDishBtn_Click);
             // 
             // dishCreationForm
             // 
