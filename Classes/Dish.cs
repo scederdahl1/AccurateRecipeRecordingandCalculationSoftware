@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,15 +10,21 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 {
     internal class Dish
     {
-        public string Name { get; set; }    
+        public ObjectId UserId { get; set; }
+        public string Name { get; set; }
         public List<Recipe> Recipes { get; set; }
-        public List<CookingStep> CombinedCookingSteps { get;  set; }
+        public List<CookingStep> CombinedCookingSteps { get; set; }
+        public string fileType { get; set; }
 
-        public Dish(string name)
+        public Dish(string name, ObjectId userId)
         {
+
             Name = name;
             Recipes = new List<Recipe>();
             CombinedCookingSteps = new List<CookingStep>();
+            fileType = "Dish";
+            UserId = userId;
+
 
         }
         public void AddRecipe(Recipe recipe)
@@ -32,15 +39,16 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 .OrderBy(step => step.StepTime)
                 .ToList();
 
-        
-        for (int i = 0; i<CombinedCookingSteps.Count; i++)
+
+            for (int i = 0; i < CombinedCookingSteps.Count; i++)
             {
                 CombinedCookingSteps[i].StepNumber = i + 1;
             }
-          
-}
 
-        
+        }
+
+
+
 
     }
 }

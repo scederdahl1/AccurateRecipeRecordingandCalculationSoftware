@@ -64,10 +64,10 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 MessageBox.Show("No files selected. Please check at least one file.");
                 return;
             }
+            ObjectId userId = Useraccount.UserId;
 
-            // Create a new Dish object using the dish name from the TextBox
             string dishName = dishNameTxtBox.Text;
-            Dish myDish = new Dish(dishName);
+            Dish myDish = new Dish(dishName, userId);
 
             foreach (string fileName in recipeFileCheckbox.CheckedItems)
             {
@@ -96,7 +96,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             // Combine and reorder cooking steps
             myDish.CombineCookingSteps();
 
-            // Ensure the dish name is safe for a file path
+            // Dish File Name verification
             string sanitizedDishName = string.Concat(myDish.Name.Split(Path.GetInvalidFileNameChars()));
             string bsonFilePath = Path.Combine("C:\\Users\\PC\\Desktop", sanitizedDishName + ".bson");
 
@@ -111,7 +111,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 }
             }
 
-            // Optional: Notify the user of the saved file
+            
             MessageBox.Show($"Dish saved to {bsonFilePath}");
 
             await SaveDishToMongoDB(myDish);

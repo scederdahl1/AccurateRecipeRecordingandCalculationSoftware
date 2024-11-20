@@ -18,6 +18,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         public int Servings { get; set; }
         public double CostPerServing { get; set; }
         public string fileType { get; set; }
+        
 
         public Recipe() // Default constructor
         {

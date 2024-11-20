@@ -159,6 +159,12 @@
       <DependentUpon>dishCreationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Ingredient.cs" />
+    <Compile Include="importedrecipeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="importedrecipeView.Designer.cs">
+      <DependentUpon>importedrecipeView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dishCreationForm.resx">
       <DependentUpon>dishCreationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="importedrecipeView.resx">
+      <DependentUpon>importedrecipeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

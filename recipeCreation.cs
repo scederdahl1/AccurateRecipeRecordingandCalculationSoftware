@@ -34,9 +34,10 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 string Name = row.Cells["ingredientName"].Value?.ToString() ?? string.Empty;
                 string Preparation = row.Cells["ingredientPreparation"].Value?.ToString() ?? string.Empty;
                 int Amount = Convert.ToInt16(row.Cells["ingredientAmount"].Value ?? 0);
+                string unit = row.Cells["ingredientUnit"].Value?.ToString() ?? string.Empty;
                 decimal Cost = Convert.ToDecimal(row.Cells["ingredientCost"].Value ?? 0);
 
-                var ingredient = new Ingredient(Name, Preparation, Amount, Cost);
+                var ingredient = new Ingredient(Name, Preparation, Amount, unit, Cost);
 
                 ingredientList.Add(ingredient);
 
@@ -100,6 +101,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             List<CookingStep> cookingStepsList = ReadDataIntoCookingSteps();
             string recipeName = recipeTitlebox.Text;
             int servings = Int32.Parse(recipeServingsTextbox.Text);
+
 
             return new Recipe(userId)
             {
