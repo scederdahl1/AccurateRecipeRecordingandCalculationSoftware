@@ -28,138 +28,197 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.recipeOptionPanel = new System.Windows.Forms.Panel();
-            this.recipeCreationLabell = new System.Windows.Forms.LinkLabel();
-            this.dishOptionPanel = new System.Windows.Forms.Panel();
-            this.createDishLabel = new System.Windows.Forms.LinkLabel();
-            this.recipeListBox1 = new System.Windows.Forms.ListBox();
-            this.existingRecipeslbl = new System.Windows.Forms.Label();
-            this.dishFileListBox = new System.Windows.Forms.ListBox();
-            this.existingDishlbl = new System.Windows.Forms.Label();
-            this.culinaCalcDBLbl = new System.Windows.Forms.Label();
-            this.recipeOptionPanel.SuspendLayout();
-            this.dishOptionPanel.SuspendLayout();
-            this.SuspendLayout();
+            recipeOptionPanel = new System.Windows.Forms.Panel();
+            existingRecipeslbl = new System.Windows.Forms.Label();
+            recipeListBox1 = new System.Windows.Forms.ListBox();
+            recipeCreationLabell = new System.Windows.Forms.LinkLabel();
+            dishOptionPanel = new System.Windows.Forms.Panel();
+            existingDishlbl = new System.Windows.Forms.Label();
+            dishFileListBox = new System.Windows.Forms.ListBox();
+            createDishLabel = new System.Windows.Forms.LinkLabel();
+            culinaCalcDBLbl = new System.Windows.Forms.Label();
+            panel1 = new System.Windows.Forms.Panel();
+            label1 = new System.Windows.Forms.Label();
+            listBox1 = new System.Windows.Forms.ListBox();
+            linkLabel1 = new System.Windows.Forms.LinkLabel();
+            recipeOptionPanel.SuspendLayout();
+            dishOptionPanel.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // recipeOptionPanel
             // 
-            this.recipeOptionPanel.Controls.Add(this.existingRecipeslbl);
-            this.recipeOptionPanel.Controls.Add(this.recipeListBox1);
-            this.recipeOptionPanel.Controls.Add(this.recipeCreationLabell);
-            this.recipeOptionPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recipeOptionPanel.Location = new System.Drawing.Point(67, 166);
-            this.recipeOptionPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.recipeOptionPanel.Name = "recipeOptionPanel";
-            this.recipeOptionPanel.Size = new System.Drawing.Size(356, 302);
-            this.recipeOptionPanel.TabIndex = 0;
-            // 
-            // recipeCreationLabell
-            // 
-            this.recipeCreationLabell.AutoSize = true;
-            this.recipeCreationLabell.Location = new System.Drawing.Point(24, 147);
-            this.recipeCreationLabell.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.recipeCreationLabell.Name = "recipeCreationLabell";
-            this.recipeCreationLabell.Size = new System.Drawing.Size(310, 37);
-            this.recipeCreationLabell.TabIndex = 0;
-            this.recipeCreationLabell.TabStop = true;
-            this.recipeCreationLabell.Text = "+Create New Recipe";
-            this.recipeCreationLabell.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.recipeCreationLabell_LinkClicked);
-            // 
-            // dishOptionPanel
-            // 
-            this.dishOptionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dishOptionPanel.Controls.Add(this.existingDishlbl);
-            this.dishOptionPanel.Controls.Add(this.dishFileListBox);
-            this.dishOptionPanel.Controls.Add(this.createDishLabel);
-            this.dishOptionPanel.Location = new System.Drawing.Point(639, 166);
-            this.dishOptionPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dishOptionPanel.Name = "dishOptionPanel";
-            this.dishOptionPanel.Size = new System.Drawing.Size(378, 293);
-            this.dishOptionPanel.TabIndex = 1;
-            // 
-            // createDishLabel
-            // 
-            this.createDishLabel.AutoSize = true;
-            this.createDishLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createDishLabel.Location = new System.Drawing.Point(55, 137);
-            this.createDishLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.createDishLabel.Name = "createDishLabel";
-            this.createDishLabel.Size = new System.Drawing.Size(258, 37);
-            this.createDishLabel.TabIndex = 0;
-            this.createDishLabel.TabStop = true;
-            this.createDishLabel.Text = "Create New Dish";
-            this.createDishLabel.Visible = false;
-            this.createDishLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createDishLabel_LinkClicked);
-            // 
-            // recipeListBox1
-            // 
-            this.recipeListBox1.FormattingEnabled = true;
-            this.recipeListBox1.ItemHeight = 37;
-            this.recipeListBox1.Location = new System.Drawing.Point(31, 92);
-            this.recipeListBox1.Name = "recipeListBox1";
-            this.recipeListBox1.Size = new System.Drawing.Size(295, 152);
-            this.recipeListBox1.TabIndex = 1;
-            this.recipeListBox1.Visible = false;
+            recipeOptionPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            recipeOptionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            recipeOptionPanel.Controls.Add(existingRecipeslbl);
+            recipeOptionPanel.Controls.Add(recipeListBox1);
+            recipeOptionPanel.Controls.Add(recipeCreationLabell);
+            recipeOptionPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            recipeOptionPanel.Location = new System.Drawing.Point(80, 80);
+            recipeOptionPanel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            recipeOptionPanel.Name = "recipeOptionPanel";
+            recipeOptionPanel.Size = new System.Drawing.Size(350, 229);
+            recipeOptionPanel.TabIndex = 0;
             // 
             // existingRecipeslbl
             // 
-            this.existingRecipeslbl.AutoSize = true;
-            this.existingRecipeslbl.Font = new System.Drawing.Font("Gentium Basic", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.existingRecipeslbl.Location = new System.Drawing.Point(50, 27);
-            this.existingRecipeslbl.Name = "existingRecipeslbl";
-            this.existingRecipeslbl.Size = new System.Drawing.Size(201, 32);
-            this.existingRecipeslbl.TabIndex = 2;
-            this.existingRecipeslbl.Text = "Existing Recipes";
+            existingRecipeslbl.AutoSize = true;
+            existingRecipeslbl.Font = new System.Drawing.Font("Gentium Basic", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
+            existingRecipeslbl.Location = new System.Drawing.Point(79, 0);
+            existingRecipeslbl.Name = "existingRecipeslbl";
+            existingRecipeslbl.Size = new System.Drawing.Size(201, 32);
+            existingRecipeslbl.TabIndex = 2;
+            existingRecipeslbl.Text = "Existing Recipes";
             // 
-            // dishFileListBox
+            // recipeListBox1
             // 
-            this.dishFileListBox.FormattingEnabled = true;
-            this.dishFileListBox.ItemHeight = 20;
-            this.dishFileListBox.Location = new System.Drawing.Point(22, 83);
-            this.dishFileListBox.Name = "dishFileListBox";
-            this.dishFileListBox.Size = new System.Drawing.Size(295, 164);
-            this.dishFileListBox.TabIndex = 2;
-            this.dishFileListBox.Visible = false;
+            recipeListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            recipeListBox1.FormattingEnabled = true;
+            recipeListBox1.Location = new System.Drawing.Point(10, 36);
+            recipeListBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            recipeListBox1.Name = "recipeListBox1";
+            recipeListBox1.Size = new System.Drawing.Size(327, 114);
+            recipeListBox1.TabIndex = 1;
+            recipeListBox1.Visible = false;
+            recipeListBox1.SelectedIndexChanged += recipeListBox1_SelectedIndexChanged;
+            // 
+            // recipeCreationLabell
+            // 
+            recipeCreationLabell.AutoSize = true;
+            recipeCreationLabell.Location = new System.Drawing.Point(27, 170);
+            recipeCreationLabell.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            recipeCreationLabell.Name = "recipeCreationLabell";
+            recipeCreationLabell.Size = new System.Drawing.Size(310, 37);
+            recipeCreationLabell.TabIndex = 0;
+            recipeCreationLabell.TabStop = true;
+            recipeCreationLabell.Text = "+Create New Recipe";
+            recipeCreationLabell.LinkClicked += recipeCreationLabell_LinkClicked;
+            // 
+            // dishOptionPanel
+            // 
+            dishOptionPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            dishOptionPanel.Controls.Add(existingDishlbl);
+            dishOptionPanel.Controls.Add(dishFileListBox);
+            dishOptionPanel.Controls.Add(createDishLabel);
+            dishOptionPanel.Location = new System.Drawing.Point(473, 81);
+            dishOptionPanel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            dishOptionPanel.Name = "dishOptionPanel";
+            dishOptionPanel.Size = new System.Drawing.Size(346, 249);
+            dishOptionPanel.TabIndex = 1;
             // 
             // existingDishlbl
             // 
-            this.existingDishlbl.AutoSize = true;
-            this.existingDishlbl.Font = new System.Drawing.Font("Gentium Basic", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.existingDishlbl.Location = new System.Drawing.Point(56, 18);
-            this.existingDishlbl.Name = "existingDishlbl";
-            this.existingDishlbl.Size = new System.Drawing.Size(188, 32);
-            this.existingDishlbl.TabIndex = 3;
-            this.existingDishlbl.Text = "Existing Dishes";
+            existingDishlbl.AutoSize = true;
+            existingDishlbl.Font = new System.Drawing.Font("Gentium Basic", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
+            existingDishlbl.Location = new System.Drawing.Point(87, -1);
+            existingDishlbl.Name = "existingDishlbl";
+            existingDishlbl.Size = new System.Drawing.Size(188, 32);
+            existingDishlbl.TabIndex = 3;
+            existingDishlbl.Text = "Existing Dishes";
+            // 
+            // dishFileListBox
+            // 
+            dishFileListBox.FormattingEnabled = true;
+            dishFileListBox.Location = new System.Drawing.Point(8, 36);
+            dishFileListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            dishFileListBox.Name = "dishFileListBox";
+            dishFileListBox.Size = new System.Drawing.Size(327, 129);
+            dishFileListBox.TabIndex = 2;
+            dishFileListBox.Visible = false;
+            // 
+            // createDishLabel
+            // 
+            createDishLabel.AutoSize = true;
+            createDishLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            createDishLabel.Location = new System.Drawing.Point(34, 169);
+            createDishLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            createDishLabel.Name = "createDishLabel";
+            createDishLabel.Size = new System.Drawing.Size(258, 37);
+            createDishLabel.TabIndex = 0;
+            createDishLabel.TabStop = true;
+            createDishLabel.Text = "Create New Dish";
+            createDishLabel.Visible = false;
+            createDishLabel.LinkClicked += createDishLabel_LinkClicked;
             // 
             // culinaCalcDBLbl
             // 
-            this.culinaCalcDBLbl.AutoSize = true;
-            this.culinaCalcDBLbl.Font = new System.Drawing.Font("Gentium Basic", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.culinaCalcDBLbl.Location = new System.Drawing.Point(370, 69);
-            this.culinaCalcDBLbl.Name = "culinaCalcDBLbl";
-            this.culinaCalcDBLbl.Size = new System.Drawing.Size(323, 37);
-            this.culinaCalcDBLbl.TabIndex = 2;
-            this.culinaCalcDBLbl.Text = "CulinaCalc Dashboard";
+            culinaCalcDBLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            culinaCalcDBLbl.AutoSize = true;
+            culinaCalcDBLbl.Font = new System.Drawing.Font("Gentium Basic", 16F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
+            culinaCalcDBLbl.Location = new System.Drawing.Point(329, 37);
+            culinaCalcDBLbl.Name = "culinaCalcDBLbl";
+            culinaCalcDBLbl.Size = new System.Drawing.Size(323, 37);
+            culinaCalcDBLbl.TabIndex = 2;
+            culinaCalcDBLbl.Text = "CulinaCalc Dashboard";
+            // 
+            // panel1
+            // 
+            panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(listBox1);
+            panel1.Controls.Add(linkLabel1);
+            panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            panel1.Location = new System.Drawing.Point(80, 321);
+            panel1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(382, 261);
+            panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Gentium Basic", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
+            label1.Location = new System.Drawing.Point(80, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(209, 32);
+            label1.TabIndex = 2;
+            label1.Text = "Existing Sessions";
+            // 
+            // listBox1
+            // 
+            listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            listBox1.FormattingEnabled = true;
+            listBox1.Location = new System.Drawing.Point(30, 36);
+            listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new System.Drawing.Size(327, 149);
+            listBox1.TabIndex = 1;
+            listBox1.Visible = false;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            linkLabel1.Location = new System.Drawing.Point(10, 189);
+            linkLabel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new System.Drawing.Size(358, 29);
+            linkLabel1.TabIndex = 0;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Record A New Cooking Session\r\n";
             // 
             // AccurateRecipeRecordingandCalculationSoftware
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 692);
-            this.Controls.Add(this.culinaCalcDBLbl);
-            this.Controls.Add(this.dishOptionPanel);
-            this.Controls.Add(this.recipeOptionPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "AccurateRecipeRecordingandCalculationSoftware";
-            this.Text = "CulinaCalc";
-            this.Load += new System.EventHandler(this.AccurateRecipeRecordingandCalculationSoftware_Load);
-            this.recipeOptionPanel.ResumeLayout(false);
-            this.recipeOptionPanel.PerformLayout();
-            this.dishOptionPanel.ResumeLayout(false);
-            this.dishOptionPanel.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(882, 581);
+            Controls.Add(panel1);
+            Controls.Add(culinaCalcDBLbl);
+            Controls.Add(dishOptionPanel);
+            Controls.Add(recipeOptionPanel);
+            Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            MaximumSize = new System.Drawing.Size(1000, 1000);
+            Name = "AccurateRecipeRecordingandCalculationSoftware";
+            Text = "CulinaCalc";
+            Load += AccurateRecipeRecordingandCalculationSoftware_Load;
+            recipeOptionPanel.ResumeLayout(false);
+            recipeOptionPanel.PerformLayout();
+            dishOptionPanel.ResumeLayout(false);
+            dishOptionPanel.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -173,6 +232,10 @@
         private System.Windows.Forms.Label existingDishlbl;
         private System.Windows.Forms.ListBox dishFileListBox;
         private System.Windows.Forms.Label culinaCalcDBLbl;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

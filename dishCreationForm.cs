@@ -51,7 +51,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
         private void dishCreationForm_Load(object sender, EventArgs e)
         {
-            ObjectId currentUserId = Useraccount.UserId; // Replace with actual logged-in user's ID
+            ObjectId currentUserId = Useraccount.UserId; 
             string directoryPath = "C:\\Users\\PC\\Desktop";
 
             loadRecipeFilesIntoCheckbox(directoryPath, currentUserId);

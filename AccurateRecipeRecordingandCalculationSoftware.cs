@@ -89,7 +89,8 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                                 recipeListBox1.Items.Add(Path.GetFileName(file));
                                 recipeListBox1.Visible = true;
                                 existingRecipeslbl.Visible = true;
-                                recipeCreationLabell.Location = new Point(50, 175);
+                                recipeCreationLabell.Visible = true;
+
                             }
                             else if (fileType == "Dish")
                             {
@@ -97,10 +98,10 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                                 dishFileListBox.Visible = true;
                                 existingDishlbl.Visible = true;
                                 createDishLabel.Visible = true;
-                                createDishLabel.Location = new Point(50, 168);
+                                
                             }
-                           
-                            
+
+
                         }
                     }
                     catch (Exception ex)
@@ -114,7 +115,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 {
                     createDishLabel.Visible = true;
                     recipeCreationLabell.Visible = true;
-                    
+
                 }
             }
             catch (Exception ex)
@@ -122,6 +123,11 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 // General error handling
                 MessageBox.Show($"An error occurred while accessing files: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void recipeListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

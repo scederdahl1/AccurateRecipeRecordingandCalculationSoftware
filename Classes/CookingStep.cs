@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System;
 
-namespace AccurateRecipeRecordingandCalculationSoftware
+public class CookingStep
 {
-     public class CookingStep
+    public string StepInfo { get; set; }
+    public int StepNumber { get; set; }
+    public TimeSpan StepTime { get; set; }
+    public List<int> Dependencies { get; set; }
+    public bool CanRunInParallel { get; set; }
+
+    public CookingStep(string stepInfo, int stepNumber, TimeSpan stepTime)
     {
-        public string StepInfo { get; set; }
-        public int StepNumber { get; set; }
-        public TimeSpan StepTime { get; set; }
-
-
-        public CookingStep(string stepInfo, int stepNumber, TimeSpan stepTime)
-        {
-            StepInfo = stepInfo;
-            StepNumber = stepNumber;
-            StepTime = stepTime;
-
-        }
-
+        StepInfo = stepInfo;
+        StepNumber = stepNumber;
+        StepTime = stepTime.TotalHours;
+        Dependencies = new List<int>();
     }
 }
