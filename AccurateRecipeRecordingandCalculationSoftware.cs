@@ -98,7 +98,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                                 dishFileListBox.Visible = true;
                                 existingDishlbl.Visible = true;
                                 createDishLabel.Visible = true;
-                                
+
                             }
 
 
@@ -128,6 +128,12 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         private void recipeListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void newCookingSessionlnklbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            TestcookingSessionEntryForm newSession = new TestcookingSessionEntryForm();
+            newSession.Show();
         }
     }
 }

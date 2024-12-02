@@ -1,60 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms.VisualStyles;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
-using MongoDB.Bson.Serialization.Attributes;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
     internal class TestCookingSession
-
     {
+        public DateTime SessionDate { get; set; } 
+        public ObjectId UserId { get; set; } 
+        public List<ObjectId> AssociatedFilesId { get; set; } 
+        public List<string> SessionRecap { get; set; }
 
-        public DateTime SessionDate { get; set; }
-        public ObjectId UserId { get; set; }
-
-        public List<ObjectId> AssociatedFilesId { get; set; }
-
-        public string[] SessionRecap {  get; set; }
-
-        public TestCookingSession(ObjectId userId, DateTime sessionDate, List<String> associateFilesIDs) {
-            SessionDate = DateSet(sessionDate);
+   
+        public TestCookingSession(ObjectId userId, DateTime sessionDate, List<string> bsonFilePaths)
+        {
+            SessionDate = sessionDate.Date; 
             UserId = userId;
-            AssociatedFilesId = FileIdReader(associateFilesIDs);
-
-            
-            
-
-
-        
-        }
-        public DateTime DateSet (DateTime sessionDate)
-        {
-            sessionDate = sessionDate.Date;
-            return sessionDate;
+            AssociatedFilesId = ConvertFilePathsToObjectIds(bsonFilePaths); 
+            SessionRecap = new List<string>(); 
         }
 
-        public static List<ObjectId> FileIdReader(List<String> AssociateFileIDs)
+   
+        private List<ObjectId> ConvertFilePathsToObjectIds(List<string> filePaths)
         {
-            var result = new List<ObjectId>();
+            var objectIds = new List<ObjectId>();
 
-            try
+            foreach (var filePath in filePaths)
             {
-               foreach()
+                try
                 {
-                   
-                }
+                    
+                    var bsonData = System.IO.File.ReadAllBytes(filePath);
+                    var document = BsonDocument.Parse(System.Text.Encoding.UTF8.GetString(bsonData));
 
+                    if (document.TryGetValue("_id", out BsonValue idValue) && idValue.IsObjectId)
+                    {
+                        objectIds.Add(idValue.AsObjectId);
+                    }
+                    else
+                    {
+                        throw new Exception($"File '{filePath}' does not contain a valid ObjectId.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error reading file '{filePath}': {ex.Message}");
+                }
             }
 
+            return objectIds;
         }
 
-
-
+        public void AddRecap(string recapEntry)
+        {
+            if (!string.IsNullOrWhiteSpace(recapEntry))
+            {
+                SessionRecap.Add(recapEntry);
+            }
+        }
     }
 }

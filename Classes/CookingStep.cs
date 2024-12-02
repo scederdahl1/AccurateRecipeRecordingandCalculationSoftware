@@ -13,7 +13,7 @@ public class CookingStep
     {
         StepInfo = stepInfo;
         StepNumber = stepNumber;
-        StepTime = stepTime.TotalHours;
+      
         Dependencies = new List<int>();
     }
 }

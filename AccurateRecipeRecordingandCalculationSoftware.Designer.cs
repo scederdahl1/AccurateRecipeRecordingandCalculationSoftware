@@ -40,7 +40,7 @@
             panel1 = new System.Windows.Forms.Panel();
             label1 = new System.Windows.Forms.Label();
             listBox1 = new System.Windows.Forms.ListBox();
-            linkLabel1 = new System.Windows.Forms.LinkLabel();
+            newCookingSessionlnklbl = new System.Windows.Forms.LinkLabel();
             recipeOptionPanel.SuspendLayout();
             dishOptionPanel.SuspendLayout();
             panel1.SuspendLayout();
@@ -156,7 +156,7 @@
             panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(listBox1);
-            panel1.Controls.Add(linkLabel1);
+            panel1.Controls.Add(newCookingSessionlnklbl);
             panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             panel1.Location = new System.Drawing.Point(80, 321);
             panel1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
@@ -185,17 +185,18 @@
             listBox1.TabIndex = 1;
             listBox1.Visible = false;
             // 
-            // linkLabel1
+            // newCookingSessionlnklbl
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            linkLabel1.Location = new System.Drawing.Point(10, 189);
-            linkLabel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new System.Drawing.Size(358, 29);
-            linkLabel1.TabIndex = 0;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Record A New Cooking Session\r\n";
+            newCookingSessionlnklbl.AutoSize = true;
+            newCookingSessionlnklbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            newCookingSessionlnklbl.Location = new System.Drawing.Point(10, 189);
+            newCookingSessionlnklbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            newCookingSessionlnklbl.Name = "newCookingSessionlnklbl";
+            newCookingSessionlnklbl.Size = new System.Drawing.Size(358, 29);
+            newCookingSessionlnklbl.TabIndex = 0;
+            newCookingSessionlnklbl.TabStop = true;
+            newCookingSessionlnklbl.Text = "Record A New Cooking Session\r\n";
+            newCookingSessionlnklbl.LinkClicked += newCookingSessionlnklbl_LinkClicked;
             // 
             // AccurateRecipeRecordingandCalculationSoftware
             // 
@@ -235,7 +236,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel newCookingSessionlnklbl;
     }
 }
 
