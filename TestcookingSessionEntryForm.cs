@@ -20,7 +20,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
         private void selectAssociateFileslbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ObjectId currentUserId = Useraccount.UserId; 
+            ObjectId currentUserId = Useraccount.UserId;
             SelectUserSpecificBsonFiles(currentUserId);
         }
 
@@ -30,33 +30,32 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             string directoryPath = "C:\\Users\\PC\\Desktop";
             var validFilePaths = new List<string>();
 
-            /
+
             var bsonFiles = Directory.GetFiles(directoryPath, "*.bson");
 
-           
+
             foreach (var file in bsonFiles)
             {
                 try
                 {
-                    // Read and deserialize the BSON file
                     byte[] bsonData = File.ReadAllBytes(file);
                     var recipeDocument = BsonSerializer.Deserialize<BsonDocument>(bsonData);
 
-                   
+
                     if (recipeDocument.Contains("UserId") && recipeDocument["UserId"] == currentUserId)
                     {
-                        // If UserId matches, add this file to the valid file paths list
+
                         validFilePaths.Add(file);
                     }
                 }
                 catch (Exception ex)
                 {
-                    
+
                     Console.WriteLine($"Error reading file '{file}': {ex.Message}");
                 }
             }
 
-         
+
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
                 openFileDialog.Filter = "BSON Files (*.bson)|*.bson";
@@ -102,16 +101,30 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         }
 
 
-        private void saveButton_Click(object sender, EventArgs e)
+       
+
+        private void SaveTestCookingSession(TestCookingSession session)
         {
-            var currentUserId = Useraccount.UserId; 
-            DateTime sessionDate = testCookingSessionDTP.Value;  
+             
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"session1.bson");
+            byte[] bsonData = session.ToBson();
+            File.WriteAllBytes(path, bsonData);
+            MessageBox.Show($"Session saved to {path} as a BSON file.");
+        }
+
+
+        
+
+        private void sessionSaveBtn_Click(object sender, EventArgs e)
+        {
+            var currentUserId = Useraccount.UserId;
+            DateTime sessionDate = testCookingSessionDTP.Value;
             var sessionRecap = new List<String> { "Test recap" };
 
-           
+
             var session = new TestCookingSession(currentUserId, sessionDate, sessionRecap)
             {
-                AssociatedFilesId = linkedFilesIds 
+                AssociatedFilesId = linkedFilesIds
             };
 
             // Save the session data to BSON (or MongoDB)
@@ -119,24 +132,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
             MessageBox.Show("Session data saved.");
         }
-
-       
-        private void SaveTestCookingSession(TestCookingSession session)
-        {
-            var bsonDocument = new BsonDocument
-            {
-                { "SessionDate", session.SessionDate },
-                { "UserId", session.UserId },
-                { "AssociatedFilesId", new BsonArray(session.AssociatedFilesId) },
-                { "SessionRecap", new BsonArray(session.SessionRecap) }
-            };
-
-            
-            var filePath = "C:\\Users\\PC\\Desktop"; 
-            File.WriteAllBytes(filePath, bsonDocument.ToBson());
-
-     
-        }
     }
-}
+    }
+
 

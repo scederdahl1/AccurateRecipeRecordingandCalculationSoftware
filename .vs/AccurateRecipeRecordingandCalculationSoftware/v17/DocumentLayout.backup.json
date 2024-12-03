@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|solutionrelative:testcookingsessionentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|c:\\users\\pc\\source\\repos\\accuratereciperecordingandcalculationsoftware\\testcookingsessionentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|solutionrelative:testcookingsessionentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\accuratereciperecordingandcalculationsoftware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|solutionrelative:accuratereciperecordingandcalculationsoftware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\recipecreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|solutionrelative:recipecreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\testcookingsessionentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|solutionrelative:testcookingsessionentryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|c:\\users\\pc\\source\\repos\\accuratereciperecordingandcalculationsoftware\\accuratereciperecordingandcalculationsoftware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|c:\\users\\pc\\source\\repos\\accuratereciperecordingandcalculationsoftware\\classes\\testcookingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|solutionrelative:classes\\testcookingsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|c:\\users\\pc\\source\\repos\\accuratereciperecordingandcalculationsoftware\\recipecreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|solutionrelative:recipecreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|c:\\users\\pc\\source\\repos\\accuratereciperecordingandcalculationsoftware\\recipecreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|solutionrelative:recipecreation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DFA0886-90BA-4736-ACD1-15C1839BB9CC}|AccurateRecipeRecordingandCalculationSoftware.csproj|C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\dishcreationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -62,7 +58,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AccurateRecipeRecordingandCalculationSoftware.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\AccurateRecipeRecordingandCalculationSoftware.cs",
               "RelativeDocumentMoniker": "AccurateRecipeRecordingandCalculationSoftware.cs",
@@ -74,71 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TestcookingSessionEntryForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\TestcookingSessionEntryForm.cs",
-              "RelativeDocumentMoniker": "TestcookingSessionEntryForm.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\TestcookingSessionEntryForm.cs [Design]",
-              "RelativeToolTip": "TestcookingSessionEntryForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T21:21:42.971Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TestcookingSessionEntryForm.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\TestcookingSessionEntryForm.cs",
-              "RelativeDocumentMoniker": "TestcookingSessionEntryForm.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\TestcookingSessionEntryForm.cs",
-              "RelativeToolTip": "TestcookingSessionEntryForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T00:52:52.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccurateRecipeRecordingandCalculationSoftware.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\AccurateRecipeRecordingandCalculationSoftware.cs",
-              "RelativeDocumentMoniker": "AccurateRecipeRecordingandCalculationSoftware.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\AccurateRecipeRecordingandCalculationSoftware.cs",
-              "RelativeToolTip": "AccurateRecipeRecordingandCalculationSoftware.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T20:38:02.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TestCookingSession.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\Classes\\TestCookingSession.cs",
-              "RelativeDocumentMoniker": "Classes\\TestCookingSession.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\Classes\\TestCookingSession.cs",
-              "RelativeToolTip": "Classes\\TestCookingSession.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABIAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T00:33:13.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "recipeCreation.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\recipeCreation.cs",
-              "RelativeDocumentMoniker": "recipeCreation.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\recipeCreation.cs",
-              "RelativeToolTip": "recipeCreation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:29:35.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "recipeCreation.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\recipeCreation.cs",
               "RelativeDocumentMoniker": "recipeCreation.cs",
@@ -150,7 +82,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "TestcookingSessionEntryForm.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\TestcookingSessionEntryForm.cs",
+              "RelativeDocumentMoniker": "TestcookingSessionEntryForm.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\TestcookingSessionEntryForm.cs",
+              "RelativeToolTip": "TestcookingSessionEntryForm.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAG4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T00:52:52.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TestcookingSessionEntryForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\TestcookingSessionEntryForm.cs",
+              "RelativeDocumentMoniker": "TestcookingSessionEntryForm.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\TestcookingSessionEntryForm.cs [Design]",
+              "RelativeToolTip": "TestcookingSessionEntryForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T21:21:42.971Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccurateRecipeRecordingandCalculationSoftware.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\AccurateRecipeRecordingandCalculationSoftware.cs",
+              "RelativeDocumentMoniker": "AccurateRecipeRecordingandCalculationSoftware.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\AccurateRecipeRecordingandCalculationSoftware.cs",
+              "RelativeToolTip": "AccurateRecipeRecordingandCalculationSoftware.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFMAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T20:38:02.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TestCookingSession.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\Classes\\TestCookingSession.cs",
+              "RelativeDocumentMoniker": "Classes\\TestCookingSession.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\Classes\\TestCookingSession.cs",
+              "RelativeToolTip": "Classes\\TestCookingSession.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABIAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T00:33:13.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "dishCreationForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\dishCreationForm.cs",
               "RelativeDocumentMoniker": "dishCreationForm.cs",
@@ -161,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "CookingStep.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\Classes\\CookingStep.cs",
               "RelativeDocumentMoniker": "Classes\\CookingStep.cs",
@@ -173,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "dishCreationForm.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\dishCreationForm.cs",
               "RelativeDocumentMoniker": "dishCreationForm.cs",
@@ -185,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "AccurateRecipeaRecordingandCalculationSoftware.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\Classes\\AccurateRecipeaRecordingandCalculationSoftware.cs",
               "RelativeDocumentMoniker": "Classes\\AccurateRecipeaRecordingandCalculationSoftware.cs",
@@ -197,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "Dish.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\AccurateRecipeRecordingandCalculationSoftware\\Classes\\Dish.cs",
               "RelativeDocumentMoniker": "Classes\\Dish.cs",

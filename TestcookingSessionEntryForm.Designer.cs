@@ -80,6 +80,7 @@
             sessionSaveBtn.TabIndex = 4;
             sessionSaveBtn.Text = "Submit";
             sessionSaveBtn.UseVisualStyleBackColor = true;
+            sessionSaveBtn.Click += sessionSaveBtn_Click;
             // 
             // TestcookingSessionEntryForm
             // 
