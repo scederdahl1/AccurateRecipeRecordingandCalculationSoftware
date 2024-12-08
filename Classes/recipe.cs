@@ -1,13 +1,12 @@
 ﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
 
-namespace AccurateRecipeRecordingandCalculationSoftware
+namespace AccurateRecipeRecordingandCalculationSoftware.Classes
 {
     public class Recipe
     {
-       
+
         public ObjectId Id { get; set; }
         public ObjectId UserId { get; set; }
         public string Name { get; set; }
@@ -18,7 +17,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         public int Servings { get; set; }
         public double CostPerServing { get; set; }
         public string fileType { get; set; }
-        
+
 
         public Recipe() // Default constructor
         {

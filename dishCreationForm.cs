@@ -1,12 +1,12 @@
-﻿using MongoDB.Bson;
+﻿using AccurateRecipeRecordingandCalculationSoftware.Classes;
+using MongoDB.Bson;
 using MongoDB.Bson.IO;
 using MongoDB.Bson.Serialization;
+using MongoDB.Driver;
 using System;
 using System.IO;
-using System.Linq;
-using System.Windows.Forms;
-using MongoDB.Driver;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
@@ -51,7 +51,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
         private void dishCreationForm_Load(object sender, EventArgs e)
         {
-            ObjectId currentUserId = Useraccount.UserId; 
+            ObjectId currentUserId = Useraccount.UserId;
             string directoryPath = "C:\\Users\\PC\\Desktop";
 
             loadRecipeFilesIntoCheckbox(directoryPath, currentUserId);
@@ -85,7 +85,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                     Recipe recipe = BsonSerializer.Deserialize<Recipe>(bsonData);
                     myDish.Recipes.Add(recipe);
 
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -111,7 +111,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 }
             }
 
-            
+
             MessageBox.Show($"Dish saved to {bsonFilePath}");
 
             await SaveDishToMongoDB(myDish);

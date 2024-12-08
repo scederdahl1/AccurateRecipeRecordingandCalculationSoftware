@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using AccurateRecipeRecordingandCalculationSoftware.Classes;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MongoDB.Driver;
-using MongoDB.Bson;
-using System.Threading;
-using System.Diagnostics.Eventing.Reader;
-using System.Security.Cryptography.X509Certificates;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
@@ -21,15 +13,15 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         {
             InitializeComponent();
 
-            
-            
-                
-            
-            
+
+
+
+
+
 
         }
         public bool validCheck { get; set; }
-      
+
 
 
         private async void LoginButton_Click(object sender, EventArgs e)
@@ -45,17 +37,17 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 if (validCheck == true)
                 {
                     this.DialogResult = DialogResult.OK; // Indicate a successful login
-                    
+
                     this.Close(); // Close the login form
                 }
                 else
                 {
-                 
-                        invalidInfoLabel.Visible = true;
+
+                    invalidInfoLabel.Visible = true;
                     passwordTextBox.Clear();
-                  
-                        
-                  
+
+
+
                 }
             }
             catch (Exception ex)
@@ -71,7 +63,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             var collection = database.GetCollection<BsonDocument>("userIndex");
             var filter = Builders<BsonDocument>.Filter.And(
         Builders<BsonDocument>.Filter.Eq("email", username),
-        Builders<BsonDocument>.Filter.Eq("password", password) 
+        Builders<BsonDocument>.Filter.Eq("password", password)
     );
 
             var existingUser = await collection.Find(filter).FirstOrDefaultAsync();
@@ -79,7 +71,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             if (existingUser != null)
             {
                 Useraccount.UserId = existingUser["_id"].AsObjectId;
-               
+
                 return true;
             }
 
@@ -99,12 +91,12 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
         private void emailTextBox_TextChanged(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty(emailTextBox.Text))
+            if (String.IsNullOrEmpty(emailTextBox.Text))
             {
                 invalidInfoLabel.Visible = false;
 
             }
-            
+
         }
 
         private void registrationLink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
@@ -113,5 +105,5 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             registration.Show();
         }
     }
-    }
+}
 

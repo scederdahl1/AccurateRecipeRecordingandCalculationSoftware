@@ -1,11 +1,12 @@
-﻿using System;
+﻿using AccurateRecipeRecordingandCalculationSoftware.Classes;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
-using MongoDB.Driver;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
@@ -101,11 +102,11 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         }
 
 
-       
+
 
         private void SaveTestCookingSession(TestCookingSession session)
         {
-             
+
             string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), $"session1.bson");
             byte[] bsonData = session.ToBson();
             File.WriteAllBytes(path, bsonData);
@@ -113,7 +114,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         }
 
 
-        
+
 
         private void sessionSaveBtn_Click(object sender, EventArgs e)
         {
@@ -133,6 +134,6 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             MessageBox.Show("Session data saved.");
         }
     }
-    }
+}
 
 

@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 public class CookingStep
 {
@@ -13,7 +13,7 @@ public class CookingStep
     {
         StepInfo = stepInfo;
         StepNumber = stepNumber;
-      
+
         Dependencies = new List<int>();
     }
 }

@@ -1,18 +1,15 @@
-﻿using System;
-using System.Windows.Forms;
-using MongoDB.Driver;
+﻿using AccurateRecipeRecordingandCalculationSoftware.Classes;
 using MongoDB.Bson;
-using System.Drawing;
-using System.Drawing.Text;
+using MongoDB.Driver;
+using System;
 using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
-using AccurateRecipeRecordingandCalculationSoftware;
+using System.Windows.Forms;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
     public partial class userRegistration : Form
     {
-        
+
         public userRegistration()
         {
             InitializeComponent();
@@ -25,42 +22,42 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
             bool userExists = await UserExistsCheck(userRegisterEmail);
 
-            if( userExists == true)
+            if (userExists == true)
             {
                 accountExistsLabel.Visible = true;
             }
             else
-            if(userExists == false)
+            if (userExists == false)
             {
                 await registerUser(userRegisterEmail, userRegisterPass);
                 this.Close();
-               
+
             }
-            
+
         }
 
         private async Task<Boolean> UserExistsCheck(string userRegisterEmail)
         {
-         
-               String connectionUri = "mongodb+srv://scederdahl12:fireHouse123456@cluster0.omeqq.mongodb.net/?appName=Cluster0";
-                MongoClient dbClient = new MongoClient(connectionUri);
-                var database = dbClient.GetDatabase("RecipeCalculatorAccounts");
-                var collection = database.GetCollection<BsonDocument>("userIndex");
-                var filter = Builders<BsonDocument>.Filter.And(
-                Builders<BsonDocument>.Filter.Eq("email", userRegisterEmail)
-    
-        );
 
-                var existingUser = await collection.Find(filter).FirstOrDefaultAsync();
+            String connectionUri = "mongodb+srv://scederdahl12:fireHouse123456@cluster0.omeqq.mongodb.net/?appName=Cluster0";
+            MongoClient dbClient = new MongoClient(connectionUri);
+            var database = dbClient.GetDatabase("RecipeCalculatorAccounts");
+            var collection = database.GetCollection<BsonDocument>("userIndex");
+            var filter = Builders<BsonDocument>.Filter.And(
+            Builders<BsonDocument>.Filter.Eq("email", userRegisterEmail)
 
-                if (existingUser != null)
-                {
+    );
 
-                    return true;
-                }
+            var existingUser = await collection.Find(filter).FirstOrDefaultAsync();
 
-                return false;
+            if (existingUser != null)
+            {
+
+                return true;
             }
+
+            return false;
+        }
         private async Task registerUser(string userRegisterEmail, string userRegisterPass)
         {
 
@@ -69,12 +66,12 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             var database = dbClient.GetDatabase("RecipeCalculatorAccounts");
             var collection = database.GetCollection<Useraccount>("userIndex");
 
-            var newAccount = new Useraccount { email = userRegisterEmail, password = userRegisterPass};
+            var newAccount = new Useraccount { email = userRegisterEmail, password = userRegisterPass };
             await collection.InsertOneAsync(newAccount);
 
         }
-        }
-        
     }
-    
+
+}
+
 

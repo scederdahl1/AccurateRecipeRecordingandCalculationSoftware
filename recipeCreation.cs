@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
+﻿using AccurateRecipeRecordingandCalculationSoftware.Classes;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using static MongoDB.Driver.WriteConcern;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
@@ -56,7 +49,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
                 int StepNumber = Convert.ToInt16(row.Cells["cookingStepNumber"].Value ?? 0);
                 string StepInfo = row.Cells["cookingStepInstructions"].Value?.ToString() ?? string.Empty;
-       
+
                 string stepTimeString = row.Cells["cookingStepTime"].Value?.ToString();
                 if (!string.IsNullOrWhiteSpace(stepTimeString) && TimeSpan.TryParse(stepTimeString, out TimeSpan parsedTime))
                 {
@@ -79,7 +72,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                         continue;
                     }
                 }
-                
+
 
 
                 var cookingStep = new CookingStep(StepInfo, StepNumber, stepTime);
@@ -113,7 +106,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 CookingStepsList = cookingStepsList
             };
 
-            
+
 
         }
 
