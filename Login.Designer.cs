@@ -116,9 +116,9 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             // loginLogoBox1
             // 
             loginLogoBox1.Image = Resources.logo;
-            loginLogoBox1.Location = new System.Drawing.Point(428, 62);
+            loginLogoBox1.Location = new System.Drawing.Point(444, 16);
             loginLogoBox1.Name = "loginLogoBox1";
-            loginLogoBox1.Size = new System.Drawing.Size(200, 207);
+            loginLogoBox1.Size = new System.Drawing.Size(184, 186);
             loginLogoBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             loginLogoBox1.TabIndex = 7;
             loginLogoBox1.TabStop = false;

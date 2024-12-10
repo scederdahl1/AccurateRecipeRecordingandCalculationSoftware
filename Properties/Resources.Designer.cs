@@ -63,6 +63,16 @@ namespace AccurateRecipeRecordingandCalculationSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap linedpaperbackground {
+            get {
+                object obj = ResourceManager.GetObject("linedpaperbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
@@ -83,9 +93,9 @@ namespace AccurateRecipeRecordingandCalculationSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tomatoeDrawn {
+        internal static System.Drawing.Bitmap tomatoeDrawn_removebg_preview {
             get {
-                object obj = ResourceManager.GetObject("tomatoeDrawn", resourceCulture);
+                object obj = ResourceManager.GetObject("tomatoeDrawn_removebg_preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
