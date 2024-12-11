@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 using AccurateRecipeRecordingandCalculationSoftware.Properties;
 using AccurateRecipeRecordingandCalculationSoftware.Classes;
+using AccurateRecipeRecordingandCalculationSoftware;
 
 
 
@@ -119,8 +120,42 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
         private void recipeListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(recipeListBox1.SelectedItem != null) {
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string selectedFileName = recipeListBox1.SelectedItem.ToString();
+                string selectedFilePath = Path.Combine(desktopPath, selectedFileName);
+                try
+                {
+                    Recipe loadedRecipe = LoadRecipeFromBson(selectedFilePath);
 
+                    recipeView recipeView = new recipeView(loadedRecipe);
+                    recipeView.Text = loadedRecipe.Name;
+                    recipeView.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading recipe: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
+        private Recipe LoadRecipeFromBson(string filePath)
+        {
+            try
+            {
+                byte[] bsonData = File.ReadAllBytes(filePath); 
+                using (var memoryStream = new MemoryStream(bsonData))
+                {
+                    return BsonSerializer.Deserialize<Recipe>(memoryStream);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load recipe from BSON file. Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
 
         private void newCookingSessionlnklbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

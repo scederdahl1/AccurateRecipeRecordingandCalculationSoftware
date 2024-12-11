@@ -10,13 +10,13 @@
     <Compile Update="dishCreationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="importedrecipeView.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="recipeCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="recipeView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TestcookingSessionEntryForm.cs">

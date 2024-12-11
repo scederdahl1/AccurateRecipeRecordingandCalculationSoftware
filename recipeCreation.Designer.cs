@@ -234,6 +234,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             // recipeCreationlbl
             // 
             recipeCreationlbl.AutoSize = true;
+            recipeCreationlbl.BackColor = System.Drawing.Color.Transparent;
             recipeCreationlbl.Font = new System.Drawing.Font("Gentium Basic", 20F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline);
             recipeCreationlbl.Location = new System.Drawing.Point(243, 9);
             recipeCreationlbl.Name = "recipeCreationlbl";

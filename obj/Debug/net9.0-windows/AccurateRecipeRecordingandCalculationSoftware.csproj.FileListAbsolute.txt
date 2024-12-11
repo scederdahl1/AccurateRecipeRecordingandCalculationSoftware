@@ -1,7 +1,6 @@
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.csproj.AssemblyReference.cache
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.AccurateRecipeRecordingandCalculationSoftware.resources
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.dishCreationForm.resources
-C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.loadedRecipeView.resources
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.Login.resources
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.Properties.Resources.resources
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.recipeCreation.resources
@@ -33,3 +32,4 @@ C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.pdb
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.genruntimeconfig.cache
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\ref\AccurateRecipeRecordingandCalculationSoftware.dll
+C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.recipeView.resources

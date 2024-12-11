@@ -140,6 +140,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             Name = "Login";
             Text = "CulinaCalc";
+            
             ((System.ComponentModel.ISupportInitialize)loginLogoBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

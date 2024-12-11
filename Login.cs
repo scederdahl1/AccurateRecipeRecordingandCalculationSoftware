@@ -4,6 +4,7 @@ using MongoDB.Driver;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace AccurateRecipeRecordingandCalculationSoftware
 {
@@ -12,14 +13,14 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         public Login()
         {
             InitializeComponent();
-
-
+            
 
 
 
 
 
         }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool validCheck { get; set; }
 
 
@@ -40,6 +41,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
                     this.Close(); // Close the login form
                 }
+          
                 else
                 {
 
@@ -104,6 +106,10 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             userRegistration registration = new userRegistration();
             registration.Show();
         }
+        
+
+
     }
-}
+    }
+
 

@@ -89,10 +89,11 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             // recipeCreationLabell
             // 
             recipeCreationLabell.AutoSize = true;
+            recipeCreationLabell.Font = new System.Drawing.Font("Gentium Basic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             recipeCreationLabell.Location = new System.Drawing.Point(27, 170);
             recipeCreationLabell.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             recipeCreationLabell.Name = "recipeCreationLabell";
-            recipeCreationLabell.Size = new System.Drawing.Size(291, 37);
+            recipeCreationLabell.Size = new System.Drawing.Size(264, 37);
             recipeCreationLabell.TabIndex = 0;
             recipeCreationLabell.TabStop = true;
             recipeCreationLabell.Text = "Create New Recipe";
@@ -133,11 +134,11 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             // createDishLabel
             // 
             createDishLabel.AutoSize = true;
-            createDishLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            createDishLabel.Font = new System.Drawing.Font("Gentium Basic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             createDishLabel.Location = new System.Drawing.Point(34, 169);
             createDishLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             createDishLabel.Name = "createDishLabel";
-            createDishLabel.Size = new System.Drawing.Size(258, 37);
+            createDishLabel.Size = new System.Drawing.Size(234, 37);
             createDishLabel.TabIndex = 0;
             createDishLabel.TabStop = true;
             createDishLabel.Text = "Create New Dish";
@@ -192,11 +193,11 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             // newCookingSessionlnklbl
             // 
             newCookingSessionlnklbl.AutoSize = true;
-            newCookingSessionlnklbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            newCookingSessionlnklbl.Font = new System.Drawing.Font("Gentium Basic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             newCookingSessionlnklbl.Location = new System.Drawing.Point(57, 172);
             newCookingSessionlnklbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             newCookingSessionlnklbl.Name = "newCookingSessionlnklbl";
-            newCookingSessionlnklbl.Size = new System.Drawing.Size(232, 29);
+            newCookingSessionlnklbl.Size = new System.Drawing.Size(196, 28);
             newCookingSessionlnklbl.TabIndex = 0;
             newCookingSessionlnklbl.TabStop = true;
             newCookingSessionlnklbl.Text = "New Session Recap";
