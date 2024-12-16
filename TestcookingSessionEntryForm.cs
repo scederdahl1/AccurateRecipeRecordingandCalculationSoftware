@@ -91,12 +91,6 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                         })
                         .ToList();
 
-                    // For debugging
-                    Console.WriteLine("Linked File IDs:");
-                    foreach (var fileId in linkedFilesIds)
-                    {
-                        Console.WriteLine(fileId);
-                    }
                 }
             }
         }
@@ -120,7 +114,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         {
             var currentUserId = Useraccount.UserId;
             DateTime sessionDate = testCookingSessionDTP.Value;
-            var sessionRecap = new List<String> { "Test recap" };
+            var sessionRecap = cookingSeshRTB1.Lines.ToList();
 
 
             var session = new TestCookingSession(currentUserId, sessionDate, sessionRecap)

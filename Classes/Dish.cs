@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AccurateRecipeRecordingandCalculationSoftware.Classes
 {
-    internal class Dish
+    public class Dish
     {
         public ObjectId UserId { get; set; }
         public string Name { get; set; }

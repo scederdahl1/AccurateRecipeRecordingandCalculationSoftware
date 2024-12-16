@@ -1,4 +1,5 @@
-﻿namespace AccurateRecipeRecordingandCalculationSoftware
+﻿using AccurateRecipeRecordingandCalculationSoftware.Properties;
+namespace AccurateRecipeRecordingandCalculationSoftware
 {
     partial class TestcookingSessionEntryForm
     {
@@ -29,7 +30,7 @@
         private void InitializeComponent()
         {
             cookingSeshRTB1 = new System.Windows.Forms.RichTextBox();
-            label1 = new System.Windows.Forms.Label();
+            sessionDateLbl = new System.Windows.Forms.Label();
             testCookingSessionDTP = new System.Windows.Forms.DateTimePicker();
             selectAssociateFileslbl = new System.Windows.Forms.LinkLabel();
             sessionSaveBtn = new System.Windows.Forms.Button();
@@ -44,19 +45,20 @@
             cookingSeshRTB1.TabIndex = 0;
             cookingSeshRTB1.Text = "";
             // 
-            // label1
+            // sessionDateLbl
             // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Gentium Basic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(12, 39);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(151, 28);
-            label1.TabIndex = 1;
-            label1.Text = "Session Date:";
+            sessionDateLbl.AutoSize = true;
+            sessionDateLbl.BackColor = System.Drawing.Color.Transparent;
+            sessionDateLbl.Font = new System.Drawing.Font("Gentium Basic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            sessionDateLbl.Location = new System.Drawing.Point(12, 39);
+            sessionDateLbl.Name = "sessionDateLbl";
+            sessionDateLbl.Size = new System.Drawing.Size(176, 32);
+            sessionDateLbl.TabIndex = 1;
+            sessionDateLbl.Text = "Session Date:";
             // 
             // testCookingSessionDTP
             // 
-            testCookingSessionDTP.Location = new System.Drawing.Point(169, 39);
+            testCookingSessionDTP.Location = new System.Drawing.Point(199, 38);
             testCookingSessionDTP.Name = "testCookingSessionDTP";
             testCookingSessionDTP.Size = new System.Drawing.Size(300, 31);
             testCookingSessionDTP.TabIndex = 2;
@@ -64,9 +66,11 @@
             // selectAssociateFileslbl
             // 
             selectAssociateFileslbl.AutoSize = true;
+            selectAssociateFileslbl.BackColor = System.Drawing.Color.Transparent;
+            selectAssociateFileslbl.Font = new System.Drawing.Font("Gentium Basic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             selectAssociateFileslbl.Location = new System.Drawing.Point(42, 102);
             selectAssociateFileslbl.Name = "selectAssociateFileslbl";
-            selectAssociateFileslbl.Size = new System.Drawing.Size(206, 25);
+            selectAssociateFileslbl.Size = new System.Drawing.Size(234, 25);
             selectAssociateFileslbl.TabIndex = 3;
             selectAssociateFileslbl.TabStop = true;
             selectAssociateFileslbl.Text = "Select Recipes or Dishes ";
@@ -86,11 +90,12 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackgroundImage = Resources.linedpaperbackground;
             ClientSize = new System.Drawing.Size(628, 508);
             Controls.Add(sessionSaveBtn);
             Controls.Add(selectAssociateFileslbl);
             Controls.Add(testCookingSessionDTP);
-            Controls.Add(label1);
+            Controls.Add(sessionDateLbl);
             Controls.Add(cookingSeshRTB1);
             Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             Name = "TestcookingSessionEntryForm";
@@ -102,7 +107,7 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox cookingSeshRTB1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label sessionDateLbl;
         private System.Windows.Forms.DateTimePicker testCookingSessionDTP;
         private System.Windows.Forms.LinkLabel selectAssociateFileslbl;
         private System.Windows.Forms.Button sessionSaveBtn;

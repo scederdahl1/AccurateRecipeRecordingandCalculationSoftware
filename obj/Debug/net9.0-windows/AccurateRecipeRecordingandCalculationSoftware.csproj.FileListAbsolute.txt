@@ -33,3 +33,4 @@ C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.genruntimeconfig.cache
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\ref\AccurateRecipeRecordingandCalculationSoftware.dll
 C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.recipeView.resources
+C:\Users\PC\source\repos\AccurateRecipeRecordingandCalculationSoftware\obj\Debug\net9.0-windows\AccurateRecipeRecordingandCalculationSoftware.DishView.resources

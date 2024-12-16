@@ -34,9 +34,19 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         private void recipeCreationLabell_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             recipeCreation createdRecipe = new recipeCreation();
-            createdRecipe.Show();
 
+
+            createdRecipe.RecipeCreated += (s, args) =>
+            {
+                string directorypath = "C:\\Users\\PC\\Desktop";
+                ObjectId currentUserId = Useraccount.UserId;
+                LoadListBoxes(directorypath, currentUserId);
+            };
+
+            createdRecipe.Show();
         }
+
+
 
         private void createDishLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -58,11 +68,12 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                 dishFileListBox.Visible = false;
                 createDishLabel.Visible = false;
                 recipeCreationLabell.Visible = false;
+                sessionListbox.Visible = false;
 
 
                 recipeListBox1.Items.Clear();
                 dishFileListBox.Items.Clear();
-
+                sessionListbox.Items.Clear();
                 foreach (var file in files)
                 {
                     try
@@ -110,6 +121,13 @@ namespace AccurateRecipeRecordingandCalculationSoftware
                     recipeCreationLabell.Visible = true;
 
                 }
+                if (recipeListBox1.Visible && !dishFileListBox.Visible)
+                {
+                    createDishLabel.Visible = true;
+                    existingDishlbl.Visible = true;
+
+
+                }
             }
             catch (Exception ex)
             {
@@ -120,7 +138,8 @@ namespace AccurateRecipeRecordingandCalculationSoftware
 
         private void recipeListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(recipeListBox1.SelectedItem != null) {
+            if (recipeListBox1.SelectedItem != null)
+            {
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 string selectedFileName = recipeListBox1.SelectedItem.ToString();
                 string selectedFilePath = Path.Combine(desktopPath, selectedFileName);
@@ -143,7 +162,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         {
             try
             {
-                byte[] bsonData = File.ReadAllBytes(filePath); 
+                byte[] bsonData = File.ReadAllBytes(filePath);
                 using (var memoryStream = new MemoryStream(bsonData))
                 {
                     return BsonSerializer.Deserialize<Recipe>(memoryStream);
@@ -162,5 +181,45 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             TestcookingSessionEntryForm newSession = new TestcookingSessionEntryForm();
             newSession.Show();
         }
+
+        private void dishFileListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dishFileListBox.SelectedItem != null)
+            {
+                string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string selectedFileName = dishFileListBox.SelectedItem.ToString();
+                string selectedFilePath = Path.Combine(desktopPath, selectedFileName);
+                try
+                {
+                    Dish loadedDish = LoadDishFromBson(selectedFilePath);
+
+                    DishView dishView = new DishView(loadedDish);
+                    dishView.Text = loadedDish.Name;
+                    dishView.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading recipe: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+        private Dish LoadDishFromBson(string filePath)
+        {
+            try
+            {
+                byte[] bsonData = File.ReadAllBytes(filePath);
+                using (var memoryStream = new MemoryStream(bsonData))
+                {
+                    return BsonSerializer.Deserialize<Dish>(memoryStream);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load recipe from BSON file. Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
     }
 }

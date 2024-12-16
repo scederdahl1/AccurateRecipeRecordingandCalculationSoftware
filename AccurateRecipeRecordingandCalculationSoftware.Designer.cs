@@ -130,6 +130,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             dishFileListBox.Size = new System.Drawing.Size(327, 104);
             dishFileListBox.TabIndex = 2;
             dishFileListBox.Visible = false;
+            dishFileListBox.SelectedIndexChanged += dishFileListBox_SelectedIndexChanged;
             // 
             // createDishLabel
             // 

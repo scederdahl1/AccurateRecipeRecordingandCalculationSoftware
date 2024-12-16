@@ -116,6 +116,7 @@ namespace AccurateRecipeRecordingandCalculationSoftware
             Recipe recipe = createRecipe(currentUserId);
             SaveRecipeToBson(recipe);
             await SaveRecipeToMongoDB(recipe);
+            OnRecipeCreated();
 
             this.Close();
 
@@ -145,6 +146,12 @@ namespace AccurateRecipeRecordingandCalculationSoftware
         private void recipeCreation_Load(object sender, EventArgs e)
         {
 
+        }
+        public event EventHandler RecipeCreated;
+
+        private void OnRecipeCreated()
+        {
+            RecipeCreated?.Invoke(this, EventArgs.Empty);
         }
     }
 }

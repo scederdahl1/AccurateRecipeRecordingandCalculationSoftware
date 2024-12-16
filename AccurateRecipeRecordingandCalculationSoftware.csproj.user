@@ -10,6 +10,9 @@
     <Compile Update="dishCreationForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DishView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
